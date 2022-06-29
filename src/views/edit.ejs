@@ -19,10 +19,14 @@
   <body>
     <div class="container">
       <form class="mt-5" method="post" action="/user/update-user">
+        <div>
+          <input type="text" hidden name="id" value="<%= user.id %>" />
+        </div>
         <div class="mb-3 col-4">
           <label for="email" class="form-label">Email address</label>
           <input
             type="email"
+            value="<%= user.email%>"
             class="form-control"
             name="email"
             aria-describedby="emailHelp"
@@ -30,9 +34,14 @@
         </div>
         <div class="mb-3 col-4">
           <label for="username" class="form-label">Username</label>
-          <input type="text" class="form-control" name="username" />
+          <input
+            type="text"
+            value="<%= user.username%>"
+            class="form-control"
+            name="username"
+          />
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Save</button>
       </form>
     </div>
   </body>

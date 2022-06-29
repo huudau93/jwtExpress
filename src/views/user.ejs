@@ -60,8 +60,20 @@
             <td><%= item.email %></td>
             <td><%= item.username %></td>
             <td>
-              <button class="btn btn-warning">Edit</button>
-              <button class="btn btn-danger">Delete</button>
+              <a
+                class="btn btn-warning"
+                href="/user/update-user/<%= item.id %>"
+              >
+                Edit
+              </a>
+
+              <form
+                style="display: inline"
+                method="post"
+                action="/user/delete-user/<%= item.id %>"
+              >
+                <button class="btn btn-danger" type="submit">Delete</button>
+              </form>
             </td>
           </tr>
           <% }); %>
