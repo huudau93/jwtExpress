@@ -1,35 +1,20 @@
-import mysql from "mysql2";
 import user from "../models/models/user";
-
-const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  database: "user",
-});
+import userService from "../service/useService";
 
 const handlehelloWorld = (req, res) => {
   return res.render("home.ejs");
 };
 
-const handleUser = (req, res) => {
-  return res.render("user.ejs");
+const handleUser = async (req, res) => {
+  const userList = await userService.getUserList();
+  return res.render("user.ejs", { userList });
 };
 
 const handleCreateNewUser = (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
   const username = req.body.username;
-  console.log(email, password, username);
-  connection.query(
-    "INSERT INTO UserApps (email, password, username,createdAt,updatedAt) VALUES (?,?,?,?,?) ",
-    [email, password, username, new Date(), new Date()],
-    function (err, results, fields) {
-      if (err) {
-        console.log("coloi", err);
-      }
-      console.log(results);
-    }
-  );
+  userService.createNewUser(email, password, username);
 
   return res.send("Thanh cong create");
 };
