@@ -1,4 +1,5 @@
 import mysql from "mysql2";
+import user from "../models/models/user";
 
 const connection = mysql.createConnection({
   host: "localhost",
@@ -18,11 +19,17 @@ const handleCreateNewUser = (req, res) => {
   const email = req.body.email;
   const password = req.body.password;
   const username = req.body.username;
-
-  connection.query("SELECT * FROM Users", function (err, results, fields) {
-    console.log(results); // results contains rows returned by server
-    console.log(fields); // fields contains extra meta data about results, if available
-  });
+  console.log(email, password, username);
+  connection.query(
+    "INSERT INTO UserApps (email, password, username,createdAt,updatedAt) VALUES (?,?,?,?,?) ",
+    [email, password, username, new Date(), new Date()],
+    function (err, results, fields) {
+      if (err) {
+        console.log("coloi", err);
+      }
+      console.log(results);
+    }
+  );
 
   return res.send("Thanh cong create");
 };
