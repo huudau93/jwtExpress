@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="799934ed-a1c2-4a08-89b9-364aa0ad90ac" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/node_modules/.cache/@babel/register/.babel.7.15.4.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/@babel/register/.babel.7.15.4.development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/homeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/homeController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/web.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/web.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/useService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/useService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/user.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/user.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +24,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sskpi" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="advanced.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -59,6 +55,7 @@
       <workItem from="1656413372805" duration="4000" />
       <workItem from="1656476127446" duration="9000" />
       <workItem from="1656476435846" duration="17000" />
+      <workItem from="1656517005190" duration="40000" />
     </task>
     <servers />
   </component>
